@@ -1,42 +1,33 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
   <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <meta name="theme-color" content="#fafafa">
+  <title>Cryptocurrency Pricing Application</title>
 </head>
 
 <body>
+<div class="container" id="app">
+  <h3 class="text-center">Bitcoin Pricing</h3>
+  <h2 class="title is-1">{{ countDown }}</h2>
+  <div class="columns medium-4" v-for="(result, index) in results">
+    <div class="card">
+      <div class="card-section">
+        <p> CURRENCY {{ index }} {{ result.symbol }}</p>
+      </div>
+      <div class="card-divider">
+        <p>BUY 1 BTC : {{ result.symbol }} {{ result.buy }}</p>
+      </div>
+      <div class="card-section">
+        <p>SELL 1 BTC : {{ result.symbol }} {{ result.sell }}</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- Add your site or application content here -->
-  <table  id="myTable" class="table">
-    <thead>
-    <tr>
-      <th scope="col" onclick="sortTable(0,true)" >#</th>
-      <th scope="col" onclick="sortTable(1,false)" >Author</th>
-      <th scope="col" onclick="sortTable(2,false)">Date</th>
-      <th scope="col" onclick="sortTable(3,false)">Message</th>
-      <th scope="col" onclick="sortTable(4,false)">URL</th>
-    </tr>
-    </thead>
-    <tbody id="tableContent">
-    <tr>
-      <th scope="row" colspan="5" style="text-align:center;">Loading...</th>
-    </tr>
-    </tbody>
-  </table>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/app.js"></script>
+...
 </body>
-
 </html>
