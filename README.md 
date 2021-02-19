@@ -1,0 +1,22 @@
+# Crypto Currency Chart and Converter
+
+Test VueJS fetch Bitcoin exchange rates
+
+Features
+1. Fetch using axios
+2. Rendering using VueJS life cycle
+3. Basic styling using Bootstrap
+4. Tab formatting for charts and converter
+5. timestamp for chart api call ( there should a stamp for any data fetched from the api for debug reasons)
+
+Possible improvements
+1. Implement complete vueJS application instead of using scripts
+2. Implement NPM as package manager
+3. Implement VueJS components
+4. Implement design patterns
+5. Use Vue emits or state management (vuex)
+6. Implement complex styling by components
+7. Implement buy and sell converter using frombtc route on api
+8. Implement prettier and eslint
+9. cache request results to reduce number of api calls
+
