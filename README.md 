@@ -8,6 +8,7 @@ Features
 3. Basic styling using Bootstrap
 4. Tab formatting for charts and converter
 5. timestamp for chart api call ( there should a stamp for any data fetched from the api for debug reasons)
+6. used computed for various interactions
 
 Possible improvements
 1. Implement complete vueJS application instead of using scripts

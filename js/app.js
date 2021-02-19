@@ -49,22 +49,6 @@ const vm = new Vue({
         for (let currency in this.results) {
           this.currencies.push(currency)
         }
-
-      // axios.get(this.mainUrl).then(response => {
-      //   if(response.status !== 200){
-      //     throw new Error('Generic error')
-      //   }
-      //   return response.data;
-      // }).then(response => {
-      //   this.getNow();
-      //   this.results = response;
-      //   // Adding all charCodes to currency array
-      //   for (let currency in this.results) {
-      //     this.currencies.push(currency)
-      //   }
-      // }).catch(error => {
-      //   console.log(error);
-      // });
     },
     isActive(menuItem) {
       return this.activeItem === menuItem
@@ -88,21 +72,6 @@ const vm = new Vue({
       }
 
       return this.converter.result = result;
-
-
-
-      //make api request
-      // axios.get(`${this.mainUrl}/tobtc?currency=${this.converter.to}&value=${this.converter.amount}`).then(response => {
-      //   if(response.status !== 200){
-      //     throw new Error('Generic error')
-      //   }
-      //   return response.data;
-      // }).then(response => {
-      //    this.converter.result = response;
-      // }).catch(error => {
-      //   this.showError = true;
-      //   console.log(error);
-      // });
     },
     async fetchData (url) {
     return axios.get(url).then(response => {
